@@ -1,0 +1,157 @@
+/* General styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f1de; /* Light beige background */
+  color: #333;
+  line-height: 1.6;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background: linear-gradient(
+    135deg,
+    #f4978e,
+    #a29bfe
+  ); /* Soft pink to light purple */
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+section {
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #fff3e6; /* Light beige cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2d3436;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #f4978e; /* Light coral for focus */
+  outline: none;
+}
+
+.btn {
+  background-color: #81b29a; /* Pastel green */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #6aaf96; /* Darker pastel green */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Controls for filtering and sorting */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.controls label {
+  margin-right: 10px;
+}
+
+.controls select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #ffcdb2; /* Light peach */
+  color: #333;
+  font-weight: bold;
+}
+
+table tbody tr:hover {
+  background-color: #ffe5d1; /* Very light peach hover effect */
+}
+
+.total-expense {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+/* Pie chart */
+.chart-section canvas {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

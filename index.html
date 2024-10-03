@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Budget Tracker</h1>
+      </header>
+
+      <!-- Form to Add Expenses -->
+      <section class="add-expense-section">
+        <div class="card expense-form-card">
+          <h2><i class="fas fa-wallet"></i> Add New Expense</h2>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <input
+              type="text"
+              id="description"
+              placeholder="E.g., Grocery shopping"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category:</label>
+            <select id="category">
+              <option value="Groceries">Groceries</option>
+              <option value="Utilities">Utilities</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Transportation">Transportation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="amount">Amount ($):</label>
+            <input type="number" id="amount" placeholder="E.g., 50" required />
+          </div>
+
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required />
+          </div>
+
+          <button class="btn" onclick="addExpense()">Add Expense</button>
+        </div>
+      </section>
+
+      <!-- Summary Section -->
+      <section class="summary-section">
+        <div class="card summary-card">
+          <h2><i class="fas fa-chart-line"></i> Expense Summary</h2>
+
+          <!-- Filter and Sort -->
+          <div class="controls">
+            <label for="filter-category">Filter by Category:</label>
+            <select id="filter-category" onchange="filterExpenses()">
+              <option value="All">All</option>
+              <option value="Groceries">Groceries</option>
+              <option value="Utilities">Utilities</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Transportation">Transportation</option>
+            </select>
+
+            <label for="sort-by">Sort by:</label>
+            <select id="sort-by" onchange="sortExpenses()">
+              <option value="date">Date</option>
+              <option value="amount">Amount</option>
+              <option value="category">Category</option>
+            </select>
+          </div>
+
+          <!-- Expense Table -->
+          <table id="expense-table">
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Amount ($)</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Table data dynamically populated -->
+            </tbody>
+          </table>
+
+          <div class="total-expense">
+            <strong
+              >Total Expenses: $<span id="total-amount">0.00</span></strong
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Pie Chart Section -->
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+  </body>
+</html>
